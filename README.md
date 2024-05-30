@@ -239,12 +239,12 @@ Az elkészült program beadása a Canvasen történik, és két dolgot kell ide 
 ## **Pontozás**
 
 - [x] Ennek a README.md fájlnak a  kitöltése. (kötelező)
-- [ ] React használata (kötelező)
-- [ ] Redux használata (kötelező)
+- [x] React használata (kötelező)
+- [x] Redux használata (kötelező)
 - [ ] Navigáció: Navigáció megfelelően változik a be- és kijelentkezésnek megfelelően (1pt)
 - [ ] Navigáció: Az oldal kezeli, hogy munkáltatóként vagy munkavállalóként jelentkezünk be, más más navigációt jelenít meg (1pt)
-- [ ] Főoldal: A Főoldal megjelenik a keresővel (1pt)
-- [ ] Főoldal: Az oldalon kilistázza a meghirdetett állásokat (1pt)
+- [] Főoldal: A Főoldal megjelenik a keresővel (1pt)
+- [x] Főoldal: Az oldalon kilistázza a meghirdetett állásokat (1pt)
 - [ ] Főoldal: Az oldalon lehet szűrni az állásokra (2pt)
 - [ ] Főoldal: Az állásokra kattintva átvisz minket az alkalmazás az álláshirdetés részletező oldalára, ahol az ahhoz tartozó adatok jelennek meg (2pt)
 - [ ] Regisztráció: A regisztráció működik (1pt)
