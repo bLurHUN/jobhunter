@@ -1,4 +1,4 @@
-import {Card, Col, Container, Row, Spinner} from "react-bootstrap";
+import {Card, Col, Row, Spinner} from "react-bootstrap";
 import {useGetAllJobsQuery} from "../state/jobApiSlice.js";
 
 export default function Home() {
@@ -14,7 +14,6 @@ export default function Home() {
 
     if (isSuccess) {
         return (
-            <Container className={"mt-3"}>
                 <Row>
                     {data.map((item, index) => (
                         <Col key={index} xs={3}>
@@ -30,7 +29,6 @@ export default function Home() {
                         </Col>
                     ))}
                 </Row>
-            </Container>
         )
     }
 }
