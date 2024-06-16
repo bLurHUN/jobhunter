@@ -9,6 +9,6 @@ export default function RequireAuth({children}) {
     return children;
   }
 
-  return <Navigate to={`/login`}></Navigate>
+  return <Navigate to={`/`}></Navigate>
 
 }
