@@ -1,7 +1,6 @@
 import {Button, Form} from "react-bootstrap";
 import {useLoginMutation} from "../state/authApiSlice.js";
 import {Navigate} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
 import {useState} from "react";
 
 export default function Login() {
@@ -9,17 +8,11 @@ export default function Login() {
     const [password, setPassword] = useState("")
 
     const [apiLogin, {isSuccess}] = useLoginMutation();
-    const isAuthenticated = useSelector(useLoginMutation);
-
-    if (isAuthenticated) {
-        return <Navigate to="/"/>;
-    }
 
     if (isSuccess) {
+        console.log()
         return <Navigate to="/"/>;
     }
-
-    const dispatch = useDispatch();
 
     return (
         <Form>

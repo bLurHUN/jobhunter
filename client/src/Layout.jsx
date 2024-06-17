@@ -1,13 +1,19 @@
-import GuestNav from "./views/nav/GuestNav.jsx";
 import {Outlet} from "react-router-dom";
 import {Container} from "react-bootstrap";
+import {useSelector} from "react-redux";
+import {selectUser} from "./state/authSlice.js";
+import NavManager from "./views/nav/NavManager.jsx";
 
-export default function Layout () {
+export default function Layout() {
+    const username = useSelector(selectUser)
+
+    console.log(username)
+
     return (
         <>
-            <GuestNav/>
+            <NavManager/>
             <Container className={"mt-3"}>
-              <Outlet/>
+                <Outlet/>
             </Container>
         </>
     )
