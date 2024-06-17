@@ -11,7 +11,7 @@ export default function JobseekerNav() {
         <>
             <Navbar bg="primary" data-bs-theme="dark">
                 <Container>
-                    <Navbar.Brand onClick={() => navigate("/")}>Jobhunter</Navbar.Brand>
+                    <Navbar.Brand  onClick={() => navigate("/")}>Jobhunter</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link onClick={() => navigate("/")}>Főoldal</Nav.Link>
                         <Nav.Link onClick={() => navigate("/profile")}>Profilom</Nav.Link>
