@@ -1,10 +1,12 @@
-import {Card, Col, Form, Row, Spinner} from "react-bootstrap";
+import {Button, Card, Col, Form, Row, Spinner} from "react-bootstrap";
 import {useGetAllJobsQuery} from "../state/jobApiSlice.js";
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 export default function Home() {
     const [position, setPosition] = useState("")
     const {data, isLoading, isError, isSuccess} = useGetAllJobsQuery();
+    const navigate = useNavigate()
 
     if (isError) {
         return <div>Nincsenek megjelenítendő munkák</div>
@@ -39,8 +41,7 @@ export default function Home() {
                                         <Card.Title>{item.position}</Card.Title>
                                         <Card.Subtitle className="mb-2 text-muted">{item.company}</Card.Subtitle>
                                         <Card.Text>{item.description}</Card.Text>
-                                        <Card.Link href="#">Card Link</Card.Link>
-                                        <Card.Link href="#">Another Link</Card.Link>
+                                        <Button variant="primary" onClick={() => undefined}>Részletek</Button>
                                     </Card.Body>
                                 </Card>
                             </Col>
