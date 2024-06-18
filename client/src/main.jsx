@@ -7,6 +7,9 @@ import Login from "./views/Login.jsx";
 import Layout from "./Layout.jsx";
 import {Provider} from "react-redux";
 import {store} from "./state/store.js";
+import JobDetails from "./views/JobDetails.jsx";
+import Profile from "./views/Profile.jsx";
+import Register from "./views/Register.jsx";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +24,18 @@ const router = createBrowserRouter([
                 path: "/login",
                 element: <Login />,
             },
+            {
+                path: "/register",
+                element: <Register />,
+            },
+            {
+                path: "/jobs/:jobId",
+                element: <JobDetails />,
+            },
+            {
+                path: "/profile",
+                element: <Profile />
+            }
         ]
     }
 ])

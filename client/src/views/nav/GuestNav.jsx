@@ -13,7 +13,7 @@ export default function GuestNav () {
                         <Nav.Link onClick={() => navigate("/")}>Főoldal</Nav.Link>
                     </Nav>
                     <Button onClick={() => navigate("/login")} variant={"outline-light"} className={"me-2"}>Bejelentkezés</Button>
-                    <Button variant={"outline-light"}>Regisztráció</Button>
+                    <Button onClick={() => navigate("/register")} variant={"outline-light"}>Regisztráció</Button>
                 </Container>
             </Navbar>
         </>

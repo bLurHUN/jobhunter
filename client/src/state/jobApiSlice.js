@@ -12,7 +12,14 @@ export const jobApiSlice = createApi({
             transformResponse: ({data}) => data,
             providesTags: ["Job"]
         }),
+        getJobById: build.query({
+            query: (id) => `${id}`,
+            providesTags: (result) => ([
+                "Job",
+                {type: "Job", id: result.id}
+            ])
+        }),
     })
 })
 
-export const { useGetAllJobsQuery } = jobApiSlice;
+export const { useGetAllJobsQuery, useGetJobByIdQuery } = jobApiSlice;
