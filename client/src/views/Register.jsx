@@ -7,9 +7,12 @@ export default function Register () {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [fullname, setFullname] = useState("")
+    const [role, setRole] = useState("jobseeker")
     const navigate = useNavigate()
 
     const [apiRegister] = useRegisterMutation()
+
+    console.log(role)
 
     return (
         <Form>
@@ -28,13 +31,33 @@ export default function Register () {
                 <Form.Control type="password" value={password} onChange={e => setPassword(e.target.value)}/>
             </Form.Group>
 
+            <Form.Group className="mb-3">
+                <Form.Check
+                    type={"radio"}
+                    id={`1`}
+                    label="Munkavállaló"
+                    name="role"
+                    value={"jobseeker"}
+                    onChange={e => setRole(e.target.value)}
+                    defaultChecked={true}
+                />
+                <Form.Check
+                    type={"radio"}
+                    id={`2`}
+                    label="Munkáltató"
+                    name="role"
+                    value={"company"}
+                    onChange={e => setRole(e.target.value)}
+                />
+            </Form.Group>
+
             <Button variant="primary" onClick={() => {
                 apiRegister({
                     body: {
                         email,
                         password,
                         fullname,
-                        role: "jobseeker"
+                        role
                     }
                 }).then(navigate("/login"))
             }}>
